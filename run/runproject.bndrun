@@ -1,0 +1,41 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.7
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runbundles:\
+    eduonix.osgi.maingui;version=latest,\
+    eduonix.osgi.maingui;version=latest,\
+    eduonix.osgi.democode;version=latest,\
+    org.apache.felix.dependencymanager,\
+    org.apache.felix.dependencymanager.runtime,\
+    org.apache.felix.dependencymanager.shell,\
+    org.apache.felix.metatype,\
+    org.apache.felix.eventadmin,\
+    org.apache.felix.configadmin,\
+    org.apache.felix.log,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.gogo.command
+
+-runrequires:\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)'
+	
+-runsystempackages: \
+   javafx.application,\
+   javafx.beans.property,\
+   javafx.collections,\
+   javafx.event,\
+   javafx.geometry,\
+   javafx.scene,\
+   javafx.scene.effect,\
+   javafx.scene.image,\
+   javafx.scene.input,\
+   javafx.scene.control,\
+   javafx.scene.layout,\
+   javafx.scene.paint,\
+   javafx.scene.text,\
+   javafx.scene.shape,\
+   javafx.stage

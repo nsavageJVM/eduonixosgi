@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project  basedir=".">
+
+
+    <!-- location of the gen-->
+    <property name="demogen" location="${basedir}/../eduonix.osgi.democode/generated"/>
+    <property name="maingen" location="${basedir}/../eduonix.osgi.mainapp/generated"/>
+    <property name="guigen" location="${basedir}/../eduonix.osgi.maingui/generated"/>
+     <!-- location of the base-->
+    <property name="demo" location="${basedir}/../eduonix.osgi.democode/generated"/>
+    <property name="main" location="${basedir}/../eduonix.osgi.mainapp/generated"/>
+    <property name="gui" location="${basedir}/../guigen/generated"/>
+   
+        
+        <target name="clean"  description="clean up" >
+
+        <delete dir="${demogen}"/>
+        <delete dir="${maingen}"/>
+         <delete dir="${guigen}"/>
+
+        </target>
+    
+        <target name="refresh"  description="clean up" >
+
+        <eclipse.refreshLocal resource="${demo}" depth="infinite"/>
+        <eclipse.refreshLocal resource="${main}" depth="infinite"/>
+        <eclipse.refreshLocal resource="${gui}" depth="infinite"/>
+
+        </target>
+    
+  
+</project>  

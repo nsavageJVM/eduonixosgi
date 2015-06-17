@@ -1,0 +1,10 @@
+Bundle-Version: 0.0.0.${tstamp}
+-buildpath:  \
+    ../cnf/plugins/org.apache.felix.dependencymanager.annotation-3.2.0.jar;version=file,\
+	org.apache.felix.dependencymanager,\
+	osgi.core,\
+	eduonix.osgi.democode;version=latest
+Export-Package:  \
+	eduonix.osgi.maingui
+Private-Package:  \
+	eduonix.osgi.maingui.impl
